@@ -29,7 +29,8 @@ export const getAllConstituentsPaginated = (
 
   if (searchQuery) {
     const lowercasedQuery = searchQuery.toLowerCase();
-    filteredConstituents = constituents.filter(
+    const sourceForFiltering = [...constituents];
+    filteredConstituents = sourceForFiltering.filter(
       (c) =>
         c.name.toLowerCase().includes(lowercasedQuery) ||
         c.email.toLowerCase().includes(lowercasedQuery) ||
