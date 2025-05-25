@@ -2,10 +2,29 @@
 
 ## Installation
 
-1. To get started with running the service locally clone the repo by running `git clone git@github.com:antman999/constituents-service.git` on your terminal/cli.
-2. Open a duplicate terminal window once you `cd` into the repo. Next cd into the backend service, install dependencies and start the service `cd backend && npm i && npm run dev`.
-3. In the other terminal do the same for the frontend `cd frontend && npm i && npm run dev`
-4. You should now be up and running with both services.
+1.  Clone the repository:
+    ```bash
+    git clone git@github.com:antman999/constituents-service.git
+    ```
+2.  Navigate into the cloned directory:
+    ```bash
+    cd constituents-service
+    ```
+3. You will need two terminal windows/tabs for the next steps.
+4.  **In the first terminal**, set up and start the backend service:
+    ```bash
+    cd backend
+    npm install
+    npm run dev
+    ```
+     *(The backend service will typically start on `http://localhost:3001`)*
+5.  **In the second terminal**, set up and start the frontend application:
+    ```bash
+    cd frontend
+    npm install
+    npm run dev
+    ```
+6. Open the frontend URL in your browser to use the application. Both services should be up and running 🎉
 
 ## Next steps & Improvements
 
@@ -19,6 +38,7 @@ Some next steps to make this service scale are:
 4. Handle our pagination better. We can think of supporting cursor based pagination.
 5. Caching our constituents requests better.
 6. Admin tools to delete, update constituents better.
+7. Beyond auth, we should implement security best practices such as input sanitization, rate limiting, and protection against web vulnerabilities.
 
 **Frontend:**
 
